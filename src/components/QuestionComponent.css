@@ -1,6 +1,8 @@
 .Question-box {
-	height: 15px;
-	width: 30px;
-	padding: 100px;
-	border-color: green;
+	font-family: Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bolder;
+	border-radius: 20px;
+	border-color: grey;
+	border-style: solid;
+	padding: 50px;
 }

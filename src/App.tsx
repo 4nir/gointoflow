@@ -11,8 +11,6 @@ function App() {
 				<QuestionComponent questionString="What is your goal?" />
 				<QuestionComponent questionString="Set up your music" />
 
-				<br />
-				<br />
 				<Button type="primary">Set/Start Pomodoro Timer</Button>
 			</div>
 		</div>
