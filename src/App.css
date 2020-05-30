@@ -3,7 +3,7 @@
 
 .App-container {
 	text-align: center;
-	padding: 50px;
+	padding: 40px;
 	background-color: #000000;
 }
 
@@ -24,4 +24,14 @@
 	justify-content: center;
 	font-size: calc(30px + 2vmin);
 	color: white;
+	animation: myQuestion 7s;
+}
+
+@keyframes myQuestion {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
