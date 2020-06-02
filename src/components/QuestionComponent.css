@@ -2,8 +2,12 @@
 	font-family: Calibri, 'Trebuchet MS', sans-serif;
 	font-weight: bolder;
 	border-radius: 20px;
+	border-width: thin;
 	border-color: grey;
 	border-style: solid;
 	padding: 50px;
 }
 
+.Question-box:hover {
+	border-color: green;
+}

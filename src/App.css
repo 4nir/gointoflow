@@ -9,10 +9,10 @@
 
 .App-banner {
 	text-align: left;
-	padding: 10px;
+	padding: 20px;
 	color: white;
 	font-family: 'Pacifico';
-	font-size: 5em;
+	font-size: 4em;
 }
 
 .App {
@@ -22,12 +22,12 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: calc(30px + 2vmin);
+	font-size: calc(20px + 2vmin);
 	color: white;
-	animation: myQuestion 7s;
+	animation: fadeIn7Sec 7s;
 }
 
-@keyframes myQuestion {
+@keyframes fadeIn7Sec {
 	from {
 		opacity: 0;
 	}

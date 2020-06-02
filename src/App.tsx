@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
-import QuestionComponent from './components/QuestionComponent';
-import { Button } from 'antd';
-import DynamicFieldSet from './components/GoalsInputComponent';
-import PomoTimer from './components/PomoTimer';
+import HomeContainer from './components/HomeContainer';
+import PomoContainer from './components/PomoContainer';
 
 function App() {
-	const [ timerOn, setTimerOn ] = useState(false);
-	function toggleTimerOn() {
-		setTimerOn(!timerOn);
+	const [ sessionActive, setSessionActive ] = useState(false);
+	const [ timeLeftInSeconds, setTimeLeftInSeconds ] = useState(240);
+	function toggleSessionActive() {
+		setSessionActive(!sessionActive);
 	}
 	return (
 		<div className="App-container">
-			<div className="App-banner">Deepflow</div>
+			<div className="App-banner">gointoflow.com</div>
 			<div className="App">
-				<QuestionComponent questionString="Is your workspace clear of all distractions?" />
-				<QuestionComponent questionString="What is your goal?" />
-				<QuestionComponent questionString="How long is your session?" />
-
-				<Button type="primary" onClick={() => toggleTimerOn()}>
-					Start Session
-				</Button>
-				<br />
-				{timerOn ? <div /> : <PomoTimer />}
+				{!sessionActive && <HomeContainer toggleSessionActive={toggleSessionActive} />}
+				{sessionActive && <PomoContainer toggleSessionActive={toggleSessionActive} />}
 			</div>
 		</div>
 	);

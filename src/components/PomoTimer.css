@@ -1,9 +1,44 @@
-.circleBase {
-	border-radius: 50%;
-	width: 500px;
-	height: 500px;
-	border: 5px solid green;
+.times {
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
 }
 
-#timer-text {
+.times-content {
+	display: inline-block;
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	margin-top: 25px;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 5px solid green;
+	border-radius: 50%;
+}
+
+#timer-label {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+#time-left {
+	font-size: 5rem;
+	font-weight: 700;
+}
+
+.timer-container {
+	animation: fadeIn7Sec 7s;
+}
+
+@keyframes fadeIn7Sec {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
