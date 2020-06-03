@@ -1,0 +1,18 @@
+#q1 {
+	animation: fadeIn 3s;
+}
+#q2 {
+	animation: fadeIn 5s;
+}
+#q3 {
+	animation: fadeIn 6s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

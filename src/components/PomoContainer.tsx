@@ -4,29 +4,48 @@ import './PomoContainer.css';
 import PomoSettings from './PomoSettings';
 
 function PomoContainer(props: any) {
-	const [ sessionLength, setSessionLength ] = useState(25);
+	const [ sessionLength, setSessionLength ] = useState(30);
 	const [ breakLength, setBreakLength ] = useState(5);
-	const [ timeLeftInSeconds, setTimeLeftInSeconds ] = useState(240);
+	const [ timerOn, setTimerOn ] = useState(false);
+	const [ secondsLeft, setSecondsLeft ] = useState(sessionLength * 60);
 
 	function changeSessionLength(change: string) {
-		if (change == '+') {
-			setSessionLength(sessionLength + 1);
-		} else if (change == '-') {
-			setSessionLength(sessionLength - 1);
+		if (change == '+' && !timerOn) {
+			let newSessionLength = sessionLength + 1;
+			setSessionLength(newSessionLength);
+			setSecondsLeft(newSessionLength * 60);
+		} else if (change == '-' && !timerOn) {
+			let newSessionLength = sessionLength - 1;
+			setSessionLength(newSessionLength);
+			setSecondsLeft(newSessionLength * 60);
 		} else {
 			console.log('Error');
 		}
 	}
 
 	function changeBreakLength(change: string) {
-		if (change == '+') {
+		if (change == '+' && !timerOn) {
 			setBreakLength(breakLength + 1);
-		} else if (change == '-') {
+		} else if (change == '-' && !timerOn) {
 			setBreakLength(breakLength - 1);
 		} else {
 			console.log('Error');
 		}
 	}
+
+	function toggleTimerOn() {
+		setTimerOn(!timerOn);
+	}
+
+	useEffect(() => {
+		if (timerOn) {
+			if (secondsLeft > 0) {
+				setTimeout(() => setSecondsLeft(secondsLeft - 1), 1000);
+			} else {
+				setSecondsLeft(0);
+			}
+		}
+	});
 
 	return (
 		<div>
@@ -39,8 +58,13 @@ function PomoContainer(props: any) {
 					breakLength={breakLength}
 					changeSessionLength={changeSessionLength}
 					changeBreakLength={changeBreakLength}
+					timerOn={timerOn}
 				/>
-				<PomoTimer toggleSessionActive={props.toggleSessionActive} timeLeftInSeconds={sessionLength * 60} />
+				<PomoTimer
+					toggleSessionActive={props.toggleSessionActive}
+					toggleTimerOn={toggleTimerOn}
+					timeLeftInSeconds={secondsLeft}
+				/>
 			</div>
 		</div>
 	);

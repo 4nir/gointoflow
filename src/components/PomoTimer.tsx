@@ -3,10 +3,6 @@ import './PomoTimer.css';
 import { Button } from 'antd';
 
 function PomoTimer(props: any) {
-	const [ timerOn, setTimerOn ] = useState(false);
-	const [ secondsLeft, setSecondsLeft ] = useState(props.timeLeftInSeconds);
-	const buttonString = timerOn ? 'Stop' : 'Start';
-
 	const formatTime = (timeLeftInSeconds: number) => {
 		let minuteText = '';
 		let secondText = '';
@@ -32,30 +28,16 @@ function PomoTimer(props: any) {
 		return `${minuteText}:${secondText}`;
 	};
 
-	function toggleTimerOn() {
-		setTimerOn(!timerOn);
-	}
-
-	useEffect(() => {
-		if (timerOn) {
-			if (secondsLeft > 0) {
-				setTimeout(() => setSecondsLeft(secondsLeft - 1), 1000);
-			} else {
-				setSecondsLeft(0);
-			}
-		}
-	});
-
 	return (
 		<div className="timer-container">
 			<div className="times">
 				<div className="times-content">
 					<label id="timer-label">Session</label>
-					<span id="time-left">{formatTime(secondsLeft)}</span>
+					<span id="time-left">{formatTime(props.timeLeftInSeconds)}</span>
 				</div>
 			</div>
 			<div className="flex-container">
-				<Button type="primary" onClick={() => toggleTimerOn()}>
+				<Button type="primary" onClick={() => props.toggleTimerOn()}>
 					Start/Pause
 				</Button>
 				<Button type="primary" onClick={() => props.toggleSessionActive()}>
