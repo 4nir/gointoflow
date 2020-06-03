@@ -51,7 +51,7 @@ function PomoContainer(props: any) {
 		<div>
 			<div className="pomodoro-clock">
 				<div className="pomodoro-clock-header">
-					<h1 className="pomodoro-clock-header-name">Pomodoro Clock</h1>
+					<h1 className="pomodoro-clock-header-name">=== Pomodoro Clock ===</h1>
 				</div>
 				<PomoSettings
 					sessionLength={sessionLength}

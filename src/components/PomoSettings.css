@@ -54,3 +54,26 @@
 	margin-right: 10px;
 	font-size: 1.1rem;
 }
+
+#break-label {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 25px;
+}
+
+#session-label {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 25px;
+}
+
+.settings {
+	animation: fadeIn7Sec 7s;
+}
+
+@keyframes fadeIn7Sec {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

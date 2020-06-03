@@ -29,7 +29,7 @@ function HomeContainer(props: any) {
 				</div>
 				<div id="q2">
 					<QuestionComponent
-						questionString="Clear your workspace of all distractions"
+						questionString="Put your phone out of sight or in another room"
 						toggleQuesClicked={toggleQuesClicked}
 						quesNum={2}
 					/>
