@@ -30,6 +30,11 @@
 	font-weight: 700;
 }
 
+.flex-container {
+	padding: 5px;
+	margin: 10px;
+}
+
 .timer-container {
 	animation: fadeIn7Sec 7s;
 }

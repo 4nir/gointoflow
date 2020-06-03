@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './QuestionComponent.css';
 import 'antd/dist/antd.css';
-import { Form, Input, Button, Radio, Select, Cascader, DatePicker, InputNumber, TreeSelect, Switch } from 'antd';
 
 function QuestionComponent(props: any) {
 	const [ borderColor, setBorderColor ] = useState('grey');
@@ -10,6 +9,7 @@ function QuestionComponent(props: any) {
 	function toggleBorderColor() {
 		clicked ? setBorderColor('grey') : setBorderColor('green');
 		setClicked(!clicked);
+		props.toggleQuesClicked(props.quesNum);
 	}
 	function toggleMouseBorderColor(action: string) {
 		if (action == 'enter' && !clicked) {

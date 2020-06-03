@@ -26,3 +26,12 @@
 	font-size: calc(15px + 2vmin);
 	color: white;
 }
+
+.ant-btn-primary {
+	background-color: green;
+	border-color: black;
+}
+
+.ant-btn-primary:hover {
+	background-color: #006400;
+}

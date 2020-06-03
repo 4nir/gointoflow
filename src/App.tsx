@@ -5,7 +5,7 @@ import PomoContainer from './components/PomoContainer';
 
 function App() {
 	const [ sessionActive, setSessionActive ] = useState(false);
-	const [ timeLeftInSeconds, setTimeLeftInSeconds ] = useState(240);
+
 	function toggleSessionActive() {
 		setSessionActive(!sessionActive);
 	}

@@ -33,7 +33,7 @@
 
 .settings-section button:not(.disable):hover {
 	cursor: pointer;
-	background-color: #4ebfc9;
+	background-color: #006400;
 }
 
 .settings-section button.disable {

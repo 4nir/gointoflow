@@ -4,7 +4,7 @@ import './PomoContainer.css';
 import PomoSettings from './PomoSettings';
 
 function PomoContainer(props: any) {
-	const [ sessionLength, setSessionLength ] = useState(30);
+	const [ sessionLength, setSessionLength ] = useState(25);
 	const [ breakLength, setBreakLength ] = useState(5);
 	const [ timerOn, setTimerOn ] = useState(false);
 	const [ secondsLeft, setSecondsLeft ] = useState(sessionLength * 60);
