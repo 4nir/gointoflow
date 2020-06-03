@@ -28,7 +28,7 @@ function QuestionComponent(props: any) {
 				onMouseEnter={() => toggleMouseBorderColor('enter')}
 				onMouseLeave={() => toggleMouseBorderColor('exit')}
 			>
-				<span>{props.questionString}</span>
+				<span className="Question-text">{props.questionString}</span>
 			</div>
 			<br />
 		</div>

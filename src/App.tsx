@@ -16,6 +16,7 @@ function App() {
 				{!sessionActive && <HomeContainer toggleSessionActive={toggleSessionActive} />}
 				{sessionActive && <PomoContainer toggleSessionActive={toggleSessionActive} />}
 			</div>
+			<div className="App-footer" />
 		</div>
 	);
 }
