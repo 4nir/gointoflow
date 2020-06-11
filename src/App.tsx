@@ -4,6 +4,7 @@ import HomeContainer from './components/HomeContainer';
 import PomoContainer from './components/PomoContainer';
 
 function App() {
+	//Main
 	const [ sessionActive, setSessionActive ] = useState(false);
 
 	function toggleSessionActive() {
