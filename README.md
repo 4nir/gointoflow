@@ -1,4 +1,4 @@
-[gointoflow.com]
+gointoflow.com
 
 ## Available Scripts
 
